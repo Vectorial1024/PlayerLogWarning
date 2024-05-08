@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -33,17 +34,18 @@ namespace PlayerLogWarning
                 return;
             }
             long fileLength = theFile.Length;
+            string fileSizeText = GetFileSizeText(fileLength);
             // for now; debug dump the file size
             if (fileLength > SafeLengthThreshold)
             {
                 // warn it!
                 // if the guy has devmode, they will see this immediately
-                PlayerLogWarningMain.LogError("Log file size: " + theFile.Length + "; TOO LARGE!");
+                PlayerLogWarningMain.LogError($"Log file size: {fileSizeText}; TOO LARGE!");
             }
             else
             {
                 // no issue.
-                PlayerLogWarningMain.LogInfo("Log file size: " + theFile.Length + "; within safety limits.");
+                PlayerLogWarningMain.LogInfo($"Log file size: {fileSizeText}; within safety limits.");
             }
             hasChecked = true;
             return;
@@ -62,6 +64,24 @@ namespace PlayerLogWarning
                 return null;
             }
             return new FileInfo(logFilePath);
+        }
+
+        public static string GetFileSizeText(long length)
+        {
+            // am lazy; ref https://stackoverflow.com/questions/281640/how-do-i-get-a-human-readable-file-size-in-bytes-abbreviation-using-net
+            if (length < 0)
+            {
+                return "(invalid)";
+            }
+            string[] sizeUnits = { "B", "KB", "MB", "GB", "TB" };
+            int order = 0;
+            double loopingLength = length;
+            while (loopingLength >= 1024 && order < sizeUnits.Length - 1)
+            {
+                order++;
+                loopingLength /= 1024;
+            }
+            return string.Format("{0:0.##} {1}", loopingLength, sizeUnits[order]);
         }
     }
 }
