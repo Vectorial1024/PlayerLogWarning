@@ -23,5 +23,10 @@ namespace PlayerLogWarning
         {
             Log.Warning(MODPREFIX + " " + message);
         }
+
+        public static void LogInfo(string message)
+        {
+            Log.Message(MODPREFIX + " " + message);
+        }
     }
 }
