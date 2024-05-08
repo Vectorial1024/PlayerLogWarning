@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<packageId>V1024.PlayerLogWarning</packageId>
+	<name>Player Log Warning</name>
+	<author>Vectorial1024</author>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<modVersion IgnoreIfNoMatchingField="True">1.0.0.0</modVersion>
+	<description>A very simple mod that warns you about oversized Player.log files. In general, if your log file is somehow larger than 100MB, then something must have gone wrong.
+
+Now you can rest assured: you won't need to worry about an oversized Player.log eating up your disk space!
+
+Security note: this mod will read files inside your local RimWorld config files.</description>
+	<url>https://github.com/Vectorial1024/PlayerLogWarning</url>
+	<modDependencies>
+		<li>
+			<packageId>UnlimitedHugs.HugsLib</packageId>
+			<displayName>HugsLib</displayName>
+			<downloadUrl>https://github.com/UnlimitedHugs/RimworldHugsLib/releases/latest</downloadUrl>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>UnlimitedHugs.HugsLib</li>
+	</loadAfter>
+</ModMetaData>
