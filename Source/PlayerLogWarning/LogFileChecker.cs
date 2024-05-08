@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace PlayerLogWarning
@@ -41,6 +36,7 @@ namespace PlayerLogWarning
                 // warn it!
                 // if the guy has devmode, they will see this immediately
                 PlayerLogWarningMain.LogError($"Log file size: {fileSizeText}; TOO LARGE!");
+                MakeWarningDialogBox(fileSizeText);
             }
             else
             {
@@ -49,6 +45,24 @@ namespace PlayerLogWarning
             }
             hasChecked = true;
             return;
+        }
+
+        private static void MakeWarningDialogBox(string fileSizeText)
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.Append(PlayerLogWarningMain.MODPREFIX);
+            builder.AppendLine($"Player Log Warning:");
+            builder.AppendLine();
+            builder.AppendLine($"Your previous Player.log file size is {fileSizeText}, which is quite large!");
+            builder.AppendLine();
+            builder.AppendLine("This usually indicates some unaddressed problems.");
+            builder.AppendLine();
+            builder.AppendLine("Avoid opening the oversized file using the system default text editor; instead, consider using, e.g.:");
+            builder.AppendLine("- Notepad++");
+            builder.AppendLine("- Visual Studio Code");
+            builder.AppendLine("- Sublime Text");
+            builder.AppendLine("- (or other specialized text editors)");
+            Find.WindowStack.Add(new Dialog_MessageBox(builder.ToString(), buttonADestructive: true));
         }
 
         private static FileInfo GetLogFileInfo()
