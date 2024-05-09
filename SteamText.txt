@@ -18,7 +18,7 @@ Once per RimWorld app launch, when starting a new game or loading a game, this m
 Checking the Player.log file directly is useless because it is always near-empty when the check happens; the old Player.log will be rotated to Player-prev.log, so we will be checking that.
 
 [h1]The GitHub Repo[/h1]
-Many things, including changelogs, non-Steam downloads, and issues, are on the GitHub repo of this mod. Link: https://github.com/Vectorial1024/EliteBionicsFramework
+Many things, including changelogs, non-Steam downloads, and issues, are on the GitHub repo of this mod. Link: https://github.com/Vectorial1024/PlayerLogWarning
 
 [h1]Credits and Legal Stuff[/h1]
 [list]
