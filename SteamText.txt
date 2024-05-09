@@ -1,0 +1,31 @@
+A handy mini-mod to warn you about oversized Player.log, for better situational awareness.
+
+Package ID: V1024.PlayerLogWarning
+
+[h1]Quick Info and Compatibility[/h1]
+[list]
+[*]Requires HugsLib (warning should be given if you don't have HugsLib); place this mod below HugsLib
+[*]Does not affect savegames; remove anytime!
+[*]Security notices: this mod reads the file info of the Player-prev.log file inside your RimWorld save data folder
+[*]Multiplayer compatibility: YES
+[*]RimThreaded compatibility: YES
+[*]GitHub repo link is here: https://github.com/Vectorial1024/PlayerLogWarning
+[/list]
+
+[h1]Mod Features[/h1]
+Once per RimWorld app launch, when starting a new game or loading a game, this mod checks the Player-prev.log for its size; if it is too large (>= 100MB), a popup will be displayed.
+
+Checking the Player.log file directly is useless because it is always near-empty when the check happens; the old Player.log will be rotated to Player-prev.log, so we will be checking that.
+
+[h1]The GitHub Repo[/h1]
+Many things, including changelogs, non-Steam downloads, and issues, are on the GitHub repo of this mod. Link: https://github.com/Vectorial1024/EliteBionicsFramework
+
+[h1]Credits and Legal Stuff[/h1]
+[list]
+[*]RimWorld belongs to Ludeon Studio.
+[*]Harmony is provided by pardeike.
+[*]HugsLib is made by UnlimitedHugs.
+[/list]
+
+[h1]Conclusion[/h1]
+Please report bugs and error messages below!
