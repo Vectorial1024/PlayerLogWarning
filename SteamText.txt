@@ -25,6 +25,7 @@ Many things, including changelogs, non-Steam downloads, and issues, are on the G
 [*]RimWorld belongs to Ludeon Studio.
 [*]Harmony is provided by pardeike.
 [*]HugsLib is made by UnlimitedHugs.
+[*]The preview background is a meme template.
 [/list]
 
 [h1]Conclusion[/h1]
