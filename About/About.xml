@@ -12,7 +12,7 @@
 
 Now you can rest assured: you won't need to worry about an oversized Player.log eating up your disk space!
 
-Security note: this mod will read files inside your local RimWorld config files.</description>
+Security disclosure: this mod will read files inside your local RimWorld storage directory.</description>
 	<url>https://github.com/Vectorial1024/PlayerLogWarning</url>
 	<modDependencies>
 		<li>
