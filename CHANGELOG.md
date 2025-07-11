@@ -1,6 +1,8 @@
 # Change log
 This is the change log of Player Log Warning. This mod follows semver for versioning.
 
+Advanced users may find the repo commit tags useful.
+
 ## Dev (WIP)
 
 ## 1.0.1 (...)
