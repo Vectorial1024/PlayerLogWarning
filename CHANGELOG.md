@@ -5,9 +5,9 @@ Advanced users may find the repo commit tags useful.
 
 ## Dev (WIP)
 
-## 1.0.1 (...)
+## 1.0.1 (2025-07-12)
 An update.
-- No longer depends on HugsLib; depends on Harmony instead
+- No longer depends on HugsLib; depends on Harmony instead ([#1](https://github.com/Vectorial1024/PlayerLogWarning/issues/1))
   - It's rare to have mod update news anyway (which would depend on HugsLib)
   - Update changenotes will be delivered via this document
 - No feature changes
