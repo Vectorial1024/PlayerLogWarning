@@ -4,9 +4,9 @@ Package ID: V1024.PlayerLogWarning
 
 [h1]Quick Info and Compatibility[/h1]
 [list]
-[*]Requires HugsLib (warning should be given if you don't have HugsLib); place this mod below HugsLib
+[*]Requires Harmony; place this mod below Harmony
 [*]Does not affect savegames; remove anytime!
-[*]Security notices: this mod reads the file info of the Player-prev.log file inside your RimWorld save data folder
+[*]Security disclosure: this mod reads the file info of the Player-prev.log file inside your RimWorld save data folder
 [*]Multiplayer compatibility: YES
 [*]RimThreaded compatibility: YES
 [*]GitHub repo link is here: https://github.com/Vectorial1024/PlayerLogWarning
@@ -24,7 +24,6 @@ Many things, including changelogs, non-Steam downloads, and issues, are on the G
 [list]
 [*]RimWorld belongs to Ludeon Studio.
 [*]Harmony is provided by pardeike.
-[*]HugsLib is made by UnlimitedHugs.
 [*]The preview background is a meme template.
 [/list]
 
