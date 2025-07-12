@@ -35,13 +35,13 @@ namespace PlayerLogWarning
             {
                 // warn it!
                 // if the guy has devmode, they will see this immediately
-                PlayerLogWarningMain.LogError($"Log file size: {fileSizeText}; TOO LARGE!");
+                PlayerLogWarningMod.LogError($"Log file size: {fileSizeText}; TOO LARGE!");
                 MakeWarningDialogBox(fileSizeText);
             }
             else
             {
                 // no issue.
-                PlayerLogWarningMain.LogInfo($"Log file size: {fileSizeText}; within safety limits.");
+                PlayerLogWarningMod.LogInfo($"Log file size: {fileSizeText}; within safety limits.");
             }
             hasChecked = true;
             return;
@@ -50,7 +50,7 @@ namespace PlayerLogWarning
         private static void MakeWarningDialogBox(string fileSizeText)
         {
             StringBuilder builder = new StringBuilder();
-            builder.Append(PlayerLogWarningMain.MODPREFIX);
+            builder.Append(PlayerLogWarningMod.MODPREFIX);
             builder.AppendLine($"Player Log Warning:");
             builder.AppendLine();
             builder.AppendLine($"Your previous Player.log file size is {fileSizeText}, which is quite large!");
