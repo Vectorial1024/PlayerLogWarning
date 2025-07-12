@@ -23,7 +23,7 @@ namespace PlayerLogWarning
         /// <summary>
         /// Already includes a space character.
         /// </summary>
-        public static string MODPREFIX => "[" + MODSHORTID + "] ";
+        public static string MODPREFIX => "[" + MODSHORTID + "]";
 
         public static void LogError(string message)
         {
